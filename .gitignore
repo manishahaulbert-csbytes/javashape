@@ -1,0 +1,14 @@
+.vscode
+shapeapp/target/
+report-aggregate/target/
+shapeapp/.settings/
+report-aggregate/.settings/
+shapeapp/.classpath
+report-aggregate/.classpath
+shapeapp/.project
+report-aggregate/.project
+shapecore/.settings/
+shapecore/.classpath
+shapecore/target
+target/
+*.log
