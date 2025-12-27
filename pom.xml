@@ -25,9 +25,9 @@
     <sonar.exclusions>**/*.xml</sonar.exclusions>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <sonar.junit.reportPaths>${project.basedir}/shapeapp/target/surefire-reports,${project.basedir}/shapeapp/target/surefire-reports</sonar.junit.reportPaths>
+    <sonar.junit.reportPaths>${project.basedir}/target/surefire-reports</sonar.junit.reportPaths>
       <sonar.coverage.jacoco.xmlReportPaths>
-      ${project.basedir}/report-aggregate/target/site/jacoco-aggregate/jacoco.xml
+      **/target/site/jacoco-aggregate/jacoco.xml
   </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
   <dependencies>
