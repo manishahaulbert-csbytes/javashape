@@ -1,16 +1,16 @@
 package com.sonarsource.shapeapp;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import java.util.List;
 import java.util.ArrayList;
 import com.sonarsource.shapecore.ShapeCore;
 import com.sonarsource.shapecore.Circle;
 import com.sonarsource.shapecore.Rectangle;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 
@@ -23,7 +23,7 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    void testAppCanHandleMultipleShapes() {
+    public void testAppCanHandleMultipleShapes() {
         List<ShapeCore> shapes = new ArrayList<>();
         shapes.add(new Circle(3.0f));
         shapes.add(new Rectangle(4.0f, 5.0f));
