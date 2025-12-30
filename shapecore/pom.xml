@@ -9,7 +9,7 @@
 
   <groupId>com.sonarsource.shapecore</groupId>
   <artifactId>shapecore</artifactId>  
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>shapecore</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
