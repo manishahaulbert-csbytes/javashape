@@ -4,11 +4,11 @@
   <parent>
     <artifactId>javashape</artifactId>
     <groupId>com.sonarsource.mha</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.sonarsource.shapeapp</groupId>
   <artifactId>shapeapp</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>shapeapp</name>  
   <dependencies>
     <dependency>
