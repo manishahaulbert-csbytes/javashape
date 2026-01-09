@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sonarsource.mha</groupId>
   <artifactId>javashape</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>javashape</name>
   <modules>
@@ -14,7 +14,7 @@
     <sonar.organization>manisha-csorg</sonar.organization>
     <sonar.projectKey>javashape</sonar.projectKey>
     <sonar.projectName>javashape</sonar.projectName>
-    <sonar.projectVersion>1.0.2-SNAPSHOT</sonar.projectVersion>
+    <sonar.projectVersion>1.0.3-SNAPSHOT</sonar.projectVersion>
     <sonar.host.url>http://localhost:9000</sonar.host.url>
     <sonar.token>sqa_ab8a2207528b65c8744e88fc6a0c45c3fcc825c2</sonar.token>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -4,7 +4,7 @@
   <parent>
     <artifactId>javashape</artifactId>
     <groupId>com.sonarsource.mha</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
   </parent>
 
   <groupId>com.sonarsource.shapecore</groupId>

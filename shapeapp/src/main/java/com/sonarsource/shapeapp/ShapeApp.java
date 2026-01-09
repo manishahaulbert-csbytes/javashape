@@ -7,6 +7,7 @@ import com.sonarsource.shapecore.Circle;
 import com.sonarsource.shapecore.Rectangle;
 import java.util.logging.Logger;
 import java.util.logging.Level;
+import java.util.logging.ConsoleHandler;
 
 
 public class ShapeApp {
