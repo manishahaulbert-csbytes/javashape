@@ -8,6 +8,7 @@ import com.sonarsource.shapecore.Rectangle;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.util.logging.ConsoleHandler;
+import java.util.logging.SimpleFormatter;
 
 
 public class ShapeApp {
