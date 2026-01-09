@@ -6,6 +6,8 @@ import com.sonarsource.shapecore.ShapeCore;
 import com.sonarsource.shapecore.Circle;
 import com.sonarsource.shapecore.Rectangle;
 import java.util.logging.Logger;
+import java.util.logging.Level;
+
 
 public class ShapeApp {
 
@@ -15,7 +17,7 @@ public class ShapeApp {
         List<ShapeCore> shapes = new ArrayList<>();
         shapes.add(new Circle(5.0f));
         shapes.add(new Rectangle(4.0f, 6.0f));
-
+    
         for (ShapeCore shape : shapes) {
            logger.info("shape: " + shape.getClass().getSimpleName());
            logger.info("Area: " + shape.area());             

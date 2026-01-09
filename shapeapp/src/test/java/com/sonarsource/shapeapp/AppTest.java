@@ -12,8 +12,6 @@ import com.sonarsource.shapecore.Circle;
 import com.sonarsource.shapecore.Rectangle;
 
 
-
-
 /**
  * Unit test for simple App.
  */
@@ -27,6 +25,7 @@ public class AppTest {
         List<ShapeCore> shapes = new ArrayList<>();
         shapes.add(new Circle(3.0f));
         shapes.add(new Rectangle(4.0f, 5.0f));
+
         assertNotNull(shapes);
         assertEquals(2, shapes.size());
 
