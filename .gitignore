@@ -44,3 +44,6 @@ js/.idea
 js/node_modules
 js/node
 js/.DS_Store
+aggregatereport/js
+shapecore/js
+shapeapp/js
