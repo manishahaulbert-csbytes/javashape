@@ -21,8 +21,6 @@
   <sonar.scanner.sonarcloudUrl>https://sc-staging.io</sonar.scanner.sonarcloudUrl>
   <sonar.scanner.apiBaseUrl>https://api.sc-staging.io</sonar.scanner.apiBaseUrl>
   <sonar.host.url>https://sc-staging.io</sonar.host.url>
-  <sonar.token>68918de5132b2d87fcaa3bfdc407cc210bd384e0</sonar.token>
-
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
