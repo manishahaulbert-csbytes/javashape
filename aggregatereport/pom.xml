@@ -11,11 +11,12 @@
   <artifactId>aggregatereport</artifactId>
   <version>1.0.3-SNAPSHOT</version>
   <name>AggregateReport</name>
+  <properties> <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths></properties>
   <dependencies>
    <dependency>
     <groupId>com.sonarsource.shapecore</groupId>
     <artifactId>shapecore</artifactId>  
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     </dependency>
     <dependency>
     <groupId>com.sonarsource.shapeapp</groupId>

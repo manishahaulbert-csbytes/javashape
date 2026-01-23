@@ -34,4 +34,17 @@ public class AppTest {
             assertTrue(shape.area() > 0);
         }          
     }
+
+        @Test
+    public void testShapeAppMain() {
+        // Test that main doesn't throw an exception
+        String[] args = {};
+        try {
+            ShapeApp.main(args);
+            assertTrue(true);
+        } catch (Exception e) {
+            assertTrue(false);
+        }
+    }
+
 }

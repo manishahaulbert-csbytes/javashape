@@ -9,7 +9,7 @@
 
   <groupId>com.sonarsource.shapecore</groupId>
   <artifactId>shapecore</artifactId>  
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3-SNAPSHOT</version>
   <name>shapecore</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,14 +36,34 @@
     <version>4.13.2</version>
     <scope>test</scope>
 </dependency>
-    <dependency>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.14</version>
-</dependency>
   </dependencies>
 
-  <build>   
+  <build>  
+    <plugins>
+        <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.14</version>
+      <executions>
+        <execution>
+          <id>prepare-agent</id>
+          <goals><goal>prepare-agent</goal></goals>
+        </execution>
+        <execution>
+          <id>report</id>
+          <phase>verify</phase>
+          <goals><goal>report</goal></goals>
+          <configuration>
+            <outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+            <reports>
+              <report>xml</report>
+              <report>html</report>
+            </reports>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+      </plugins> 
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->

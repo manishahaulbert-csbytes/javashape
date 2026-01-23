@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sonarsource.mha</groupId>
+    <artifactId>javashape</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.sonarsource.jsmha</groupId>
+  <artifactId>javashape-js</artifactId>
+  <version>1.0.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>JavaScript Module</name>
+
+  <properties>
+    <sonar.sources>src</sonar.sources>
+    <sonar.tests>test</sonar.tests>
+    <sonar.test.inclusions>**/*.test.js,**/*.spec.js</sonar.test.inclusions>
+    <sonar.exclusions>**/*test.js,**/*spec.js</sonar.exclusions>
+    <sonar.javascript.lcov.reportPaths>coverage/lcov.info</sonar.javascript.lcov.reportPaths>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.12.1</version>
+        <executions>
+          <execution>
+            <id>npm-ci</id>
+            <phase>generate-resources</phase>
+            <goals><goal>npm</goal></goals>
+            <configuration>
+              <workingDirectory>${project.basedir}</workingDirectory>
+              <arguments>ci</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm-test</id>
+            <phase>test</phase>
+            <goals><goal>npm</goal></goals>
+            <configuration>
+              <workingDirectory>${project.basedir}</workingDirectory>
+              <arguments>test</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

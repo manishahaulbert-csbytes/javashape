@@ -9,12 +9,12 @@
   <groupId>com.sonarsource.shapeapp</groupId>
   <artifactId>shapeapp</artifactId>
   <version>1.0.3-SNAPSHOT</version>
-  <name>shapeapp</name>  
+  <name>shapeapp</name>
   <dependencies>
     <dependency>
       <groupId>com.sonarsource.shapecore</groupId>
       <artifactId>shapecore</artifactId>
-      <version>1.0.2-SNAPSHOT</version>
+      <version>1.0.3-SNAPSHOT</version>
     </dependency>
     <dependency>
     <groupId>junit</groupId>
@@ -22,13 +22,29 @@
     <version>4.13.2</version>
     <scope>test</scope>
     </dependency>
-    <dependency>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.14</version>    
-</dependency>
   </dependencies>
-
-  </project>  
-
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.14</version>
+    <executions>
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
   

@@ -8,15 +8,21 @@
   <modules>
     <module>shapecore</module>
     <module>shapeapp</module>
+    <module>js</module>
     <module>aggregatereport</module>
   </modules>
   <properties>
+    <revision>1.0.3-SNAPSHOT</revision>
     <sonar.organization>manisha-csorg</sonar.organization>
     <sonar.projectKey>javashape</sonar.projectKey>
     <sonar.projectName>javashape</sonar.projectName>
     <sonar.projectVersion>1.0.3-SNAPSHOT</sonar.projectVersion>
-    <sonar.host.url>http://localhost:9000</sonar.host.url>
-    <sonar.token>sqa_ab8a2207528b65c8744e88fc6a0c45c3fcc825c2</sonar.token>
+    <sonar.javascript.lcov.reportPaths>js/coverage/lcov.info</sonar.javascript.lcov.reportPaths>
+  <sonar.scanner.sonarcloudUrl>https://sc-staging.io</sonar.scanner.sonarcloudUrl>
+  <sonar.scanner.apiBaseUrl>https://api.sc-staging.io</sonar.scanner.apiBaseUrl>
+  <sonar.host.url>https://sc-staging.io</sonar.host.url>
+  <sonar.token>68918de5132b2d87fcaa3bfdc407cc210bd384e0</sonar.token>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -26,8 +32,6 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <sonar.junit.reportPaths>${project.basedir}/target/surefire-reports</sonar.junit.reportPaths>
-    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco-aggregate/jacoco.xml
-  </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
   <dependencies>
     <dependency>
@@ -39,6 +43,41 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+  <groupId>com.github.eirslett</groupId>
+  <artifactId>frontend-maven-plugin</artifactId>
+  <version>1.12.1</version>
+  <inherited>false</inherited>
+  <configuration>
+    <workingDirectory>${project.basedir}/js</workingDirectory>
+  </configuration>
+  <executions>
+    <execution>
+      <id>install-node-and-npm</id>
+      <phase>initialize</phase>
+      <goals><goal>install-node-and-npm</goal></goals>
+      <configuration>
+        <nodeVersion>v18.20.0</nodeVersion>
+      </configuration>
+    </execution>
+    <execution>
+      <id>npm-ci</id>
+      <phase>generate-resources</phase>
+      <goals><goal>npm</goal></goals>
+      <configuration>
+        <arguments>ci</arguments>
+      </configuration>
+    </execution>
+    <execution>
+      <id>npm-test</id>
+      <phase>test</phase>
+      <goals><goal>npm</goal></goals>
+      <configuration>
+        <arguments>test</arguments>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
@@ -78,6 +117,31 @@
                 <format>HTML</format>
               </formats>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
