@@ -8,6 +8,11 @@ report-aggregate/.classpath
 shapeapp/.project
 shapeapp/target
 shapeapp/.flattend-pom.xml
+shapeapp/.vscode/
+shapeapp/js/node/node_modules/
+shapeapp/js/tmp/
+shapeapp/js/target/
+shapeapp/js/npm/
 debuglog.log
 debuglog.log.*
 report-aggregate/.project
@@ -36,6 +41,8 @@ js/.flattend-pom.xml
 js/.settings/
 js/.classpath
 js/.project
+js/.vscode/
+js/
 .vs/
 ./vscode/
 
