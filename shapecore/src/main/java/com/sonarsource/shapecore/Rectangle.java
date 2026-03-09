@@ -8,7 +8,6 @@ public class Rectangle extends ShapeCore {
         this.breadth = width;
     }
 
-    @Override
     public Float area() {
         return length * breadth;
     }

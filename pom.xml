@@ -19,9 +19,6 @@
     <sonar.token>sqa_ab8a2207528b65c8744e88fc6a0c45c3fcc825c2</sonar.token>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <java.version>17</java.version>
     <sonar.exclusions>**/pom.xml</sonar.exclusions>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>

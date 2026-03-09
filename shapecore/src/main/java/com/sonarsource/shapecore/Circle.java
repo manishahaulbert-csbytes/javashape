@@ -8,7 +8,6 @@ public class Circle extends ShapeCore {
         this.breadth = radius;
     }
 
-    @Override
     public Float area() {
         return 3.14f * length * breadth;
     }
